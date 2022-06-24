@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 접근성 조사</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="#cover" class="logo">
+            <h1>The Report on Web Accessibility</h1>
+            <h2>웹 접근성 실태 파악</h2>
+        </a>
+
+        <ul>
+            <li><a href="#project-overview">프로젝트 개요</a></li>
+            <li><a href="#summary-analysis">데이터 분석 결과</a></li>
+            <li><a href="#">솔루션 제안</a></li>
+        </ul>
+    </header>
+
+    <section id="cover">
+        <div class="title">
+            <h3>정보 접근성 관련 정책을 위한<br/><b>웹 접근성</b> 실태 조사 분석 보고서</h3>
+        </div>
+
+        <div class="cover-graphic">
+            <div class="cir1"></div>
+            <div class="cir2"></div>
+            <div class="cir3"></div>
+            <div class="cir4"></div>
+        </div>
+
+        <div class="cover-footer">
+            <span>2022</span>
+            <span>Big Data</span>
+        </div>
+    </section>
+
+    <section id="project-overview">
+        <h4>Project Overview</h4>
+        <div class="subtitle">
+            <div>
+                <span>⛳️</span><br />정보 접근성 정책을 도출하기 위한<br />업종 별 웹 접근성 실태 파악
+            </div>
+        </div>
+        <p>웹 접근성은 장애인, 노인 등과 같은 사용자도 웹사이트에서 제공되는 콘텐츠를 용이하게 이용할 수 있도록 보장하는 것을 의미한다.<br />
+            비장애인은 웹사이트에서 제공되는 텍스트와 이미지, 영상 등을 접했을 때 어려움 없이 인식할 수 있지만, 시각, 청각 등 기능에 장애가 있는 사람에게는 그렇지 못하다.<br />
+            현재 웹 사이트 사용 빈도가 높은 사업체 사이트들이 기본적인 웹 접근성을 지켜 제작되었는지 파악하고, 향후 웹 정보 접근성 관련 정책을 도출하기 위해 기획하였다.</p>
+
+        <ul>
+            <li>❓ 모든 웹사이트의 웹 접근성이 전체적으로 잘 지켜지고 있는가?</li>
+            <li>❓ 업종 별 웹 접근성이 부족한 항목은 무엇인가?</li>
+            <li>❓ 전체적으로 잘 지켜지고 있지 않은 항목이 있는가? 있다면 무엇인가?</li>
+            <li>❓ 웹 접근성이 제일 좋은 업종, 제일 좋지 않은 업종은 어디인가?</li>
+            <li>❓ 업종 특성이 웹 접근성 결과에 미치는 영향이 있는가?</li>
+            <li>❓ 웹 접근성의 4가지 원칙으로 봤을 때는 어떤가?</li>
+        </ul>
+    </section>
+
+    <section class="data-overview">
+        <h4>Data Overview</h4>
+        <table>
+            <tbody>
+                <tr>
+                    <td>조사 목적</td><td>웹 사이트에 대한 접근성 실태 파악을 통한 장애인, 고령자 등 취약계층의 정보 접근성 향상 정책 수립 배경 자료로 활용</td>
+                </tr>
+                <tr>
+                    <td>조사 대상</td><td>웹 사이트 활용도가 높은 8대 산업분야 웹 사이트 1,000개</td>
+                </tr>
+                <tr>
+                    <td>조사 기준</td><td>한국형 웹 콘텐츠 접근성 지침 2.1(국가표준)</td>
+                </tr>
+                <tr>
+                    <td>조사 기간</td><td>2018년 12년 17일 ~ 2019년 3월 15일</td>
+                </tr>
+                <tr>
+                    <td>조사 기관</td><td>
+                        <a href="https://www.msit.go.kr/index.do">
+                            <img src="./img/msit.png" alt="과학기술정보통신부">
+                        </a>
+                        <a href="https://www.nia.or.kr/site/nia_kor/main.do">
+                            <img src="./img/nia.png" alt="한국지능정보사회진흥원">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>데이터 형식</td><td>웹접근성실태조사 (csv)</td>
+                </tr>
+                <tr>
+                    <td>데이터 출처</td><td><a href="https://mdis.kostat.go.kr/">https://mdis.kostat.go.kr/</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="data-preprocessing">
+        <h4>Data Preprocessing</h4>
+        <div class="subtitle">데이터 전처리</div>
+
+        <p>
+            만점 값을 100점으로 통일한 데이터셋 생성
+            <br/>
+            <span>* 소수점 둘째자리 이하부터 버림</span>
+        </p>
+
+        <div class="datapre">
+            <div>
+                <!-- <h5>기존 데이터</h5> -->
+                <img src="./img/data-before.png">
+            </div>
+            <!-- <img src="./img/arrow.png" alt=""> -->
+            <div>
+                <!-- <h5>변경 데이터</h5> -->
+                <img src="./img/data-after.png">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- *** 전체 분석 결과 요약 *** -->
+    <section id="summary-analysis">
+        <div class="subtitle">전체 분석 결과 요약</div>
+    </section>
+
+    <section class="summary">
+        <div class="sumCards">
+            <div class="sumCard">
+                <div>🐡</div>
+                <div class="sumTitle">조사한 웹사이트</div>
+                <div class="sumContent">1,000개</div>
+            </div>
+    
+            <div class="sumCard">
+                <div>🐡</div>
+                <div class="sumTitle">전체 평균 점수</div>
+                <div class="sumContent">66.6점</div>
+            </div>
+    
+            <div class="sumCard">
+                <div>🐡</div>
+                <div class="sumTitle">업종 분류 수</div>
+                <div class="sumContent">8개</div>
+            </div>
+
+            <div class="sumCard">
+                <div>🐡</div>
+                <div class="sumTitle">조사 업종 웹 접근성 수준</div>
+                <div class="sumContent">
+                    <ul>
+                        <li><div class="box"></div>G. 도매 및 소매업 <span>62.9점</span> <span>미흡</span></li>
+                        <li><div class="box"></div>I. 숙박 및 음식점업 <span>65.2점</span> <span>미흡</span></li>
+                        <li><div class="box"></div>J. 출판, 영상,방송통신 및 정보서비스업 <span>66.5점</span> <span>미흡</span></li>
+                        <li><div class="box"></div>K. 금융 및 보험업 <span>79.9점</span> <span>보통</span></li>
+                        <li><div class="box"></div>L. 부동산업 및 임대업 <span>62.1점</span> <span>미흡</span></li>
+                        <li><div class="box"></div>P. 교육 서비스업 <span>66.4점</span> <span>미흡</span></li>
+                        <li><div class="box"></div>Q. 보건업 및 사회복지 서비스업 <span>64.8점</span> <span>미흡</span></li>
+                        <li><div class="box"></div>R. 예술, 스포츠 및 여가관련 서비스업 <span>65.6점</span> <span>미흡</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sumCard">
+                <div>🧳</div>
+                <div class="sumTitle">종합 웹 접근성 수준</div>
+                <div class="sumContent">
+                    <div>미흡 (74.3%)</div>
+                    <div>보통 (12%)</div>
+                    <div>양호 (8.6%)</div>
+                    <div>우수 (5.1%)</div>
+                </div>
+            </div>
+
+            <div class="sumCard">
+                <div>🐡</div>
+                <div class="sumTitle">종합 웹 접근성 수준</div>
+                <div class="sumContent">8개</div>
+            </div>
+
+            <div class="sumCard">
+                <div>❎</div>
+                <div class="sumTitle">잘 지켜지지 않고 있는 항목 (50점 이하)</div>
+                <div class="sumContent">
+                    <div>❌  적절한 대체 텍스트</div>
+                    <div>❌  반복 영역 건너뛰기</div>
+                    <div>❌  레이블 제공</div>
+                    <div>❌  키보드 사용보장</div>
+                    <div>❌  텍스트 콘텐츠 명도 대비</div>
+                    <div>❌  제목 제공</div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+
+    <!-- *** 종합 분석 *** -->
+    <section id="comprehensive-analysis">
+        <div class="subtitle">종합 분석 결과</div>
+    </section>
+
+    <!-- 종합 분석 - 1.수준 비율 -->
+    <section class="compre-analysis">
+        <div class="graphInfo">
+            <h4>Web Site Percentage by Level</h4>
+            <h5>수준 별 웹 사이트 비율</h5>
+            <div class="label"><span><b>전체 평균 점수</b></span><span>66.6점</span></div>
+            <p>
+                총 1,000개 웹사이트에 대한 접근성 조사 결과
+                평균 66.6점으로,<br/>
+                <b>74.3%에 달하는 웹사이트가 75점 미만의 ‘미흡’</b> 수준으로 나타나<br/>
+                웹 접근성 개선의 필요성이 높은 것으로 분석되었다.
+            </p>
+        </div>
+        
+        <iframe src="./charts/result_count_plot.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no" vspace="0"></iframe>
+    </section>
+
+    <!-- 종합 분석 - 2.업종 별 결과 -->
+    <section class="compre-analysis">
+        <div class="graphInfo">
+            <h4>Results by industry</h4>
+            <h5>업종 별 결과</h5>
+            <p>
+                대부분의 업종이 평균 60점대로 웹 접근성 수준이 저조했으나,<br/><b>’K. 금융 및 보험업’이 평균 77.9점</b>으로<br/>상대적으로 웹 접근성 수준이 높은 것으로 나타났다.
+            </p>
+        </div>
+        
+        <iframe src="./charts/code_score_plot.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no" vspace="0"></iframe>
+    </section>
+
+    <!-- 종합 분석 - 3.항목 별 결과 -->
+    <section class="compre-analysis byItems">
+        <div class="graphInfo">
+            <h4>Results by item</h4>
+            <h5>항목 별 결과</h5>
+            <div class="label"><span><b>100점 항목</b></span><span><p>- 콘텐츠 간 구분<br/>- 깜빡임과 번쩍임 사용 제한</p></span></div>
+            <div class="label"><span><b>50점 미만 항목</b></span><span><p>- 적절한 대체 텍스트<br/>- 텍스트 콘텐츠 명도 대비<br/>- 키보드 사용보장<br/>- 반복 영역 건너뛰기<br/>- 제목 제공<br/>- 레이블 제공</p></span></div>
+        </div>
+        
+        <iframe src="./charts/score_df_plot.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no" vspace="0"></iframe>
+    </section>
+
+    <!-- 종합 분석 - 4.원칙 별 결과 -->
+    <section class="compre-analysis byItems">
+        <div class="graphInfo">
+            <h4>Results by item</h4>
+            <h5>원칙 별 결과</h5>
+            <p>웹 접근성의 네가지 원칙으로 나누어 보았을 때는<br/>
+                2. 운용의 용이성(8~16번 항목) 원칙이 가장 낮게 나타났지만,<br/><br/>
+                전체 사이트의 웹 접근성 수준이 미흡한 것에 비하여<br/>
+                모든 원칙의 점수가 골고루 배점되었다.<br/><br/>
+                어느 한 가지 원칙에서 특히 미흡하다기보다는<br/>
+                모든 원칙의 항목 중 일부 항목의 점수가 낮은 것을 알 수 있다.</p>
+        </div>
+        
+        <iframe src="./charts/prin_score_plot.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no" vspace="0"></iframe>
+    </section>
+
+
+    <!-- *** 업종 분석 *** -->
+    <section id="comprehensive-analysis">
+        <div class="subtitle">업종 분석 결과</div>
+    </section>
+
+    <!-- 업종 선택 -->
+    <div class="codeSelect">
+        <div>
+            <span>G.도매 및 소매업</span><span>I. 숙박 및 음식점업</span><span>J. 출판, 영상,방송통신 및 정보서비스업</span><span>K. 금융 및 보험업</span>
+        </div>
+        <div>
+            <span>L. 부동산업 및 임대업</span><span>P. 교육 서비스업</span><span>Q. 보건업 및 사회복지 서비스업</span><span>R. 예술, 스포츠 및 여가관련 서비스업</span>
+        </div>
+    </div>
+
+    <!-- 업종 분석 (1) G.도매 및 소매업 -->
+    <section class="code-analysis">
+        <div class="graphInfo">
+            <h4>도매 및 소매업</h4>
+            <h5><span>G.도매 및 소매업</span>의 조사된 사이트는 총 110개이며, 평균점수는 62.9점으로 미흡하다</h5>
+        </div>
+        
+        <div class="codeGragh">
+            <iframe src="./charts/G_result_plot.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no" vspace="0"></iframe>
+            <iframe src="./charts/G_score_plot.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no" vspace="0"></iframe>
+            <iframe src="./charts/G_prin_plot.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no" vspace="0"></iframe>
+         </div>
+
+        <p>23개 조사 항목 에서는 '적절한 대체 텍스트 제공', '키보드 사용 보장', '반복 영역 건너뛰기', '레이블 제공' 항목이 낮은 점수를 받았다.<br/>
+            쇼핑몰 사이트 특성상 이미지를 사용하다 보니 적절한 대체 텍스트나 제목, 레이블 제공 등의 항목이 낮게 평가된 걸로 판단된다.<br/>
+            장애인 등이 보다 쉽게 접근할 수 있도록 ‘반복 영역 건너뛰기’, ‘키보드 사용 보장’ 등 키보드 사용 접근성 개선이 요구된다.</p>
+    </section>
+
+    <!-- 상관 관계 비교 Correlation Analysis -->
+
+</body>
+
+</html>

@@ -1,0 +1,531 @@
+@font-face {
+    font-family: 'NanumSquare';
+    src: url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css') format('woff');
+    font-style: normal;
+}
+
+:root {
+    /* 수준 */
+    --level-1: #DF6363;
+    --level-2: #FDC635;
+    --level-3: #A5C720;
+    --level-4: #3682DB;
+    /* 코드 */
+    --code-G: #EC566A;
+    --code-I: #FDC635;
+    --code-J: #8CC301;
+    --code-K: #02BE57;
+    --code-L: #01BFC4;
+    --code-P: #079DFF;
+    --code-Q: #BF6BFF;
+    --code-R: #FF6AAC;
+    /* 원칙 */
+    --prin-1: #7ADDB8;
+    --prin-2: #5ECAC9;
+    --prin-3: #5980DB;
+    --prin-4: #4156CB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #000000;
+}
+
+p {
+    line-height: 200%;
+    letter-spacing: -0.05rem;
+}
+
+body {
+    font-family: 'NanumSquare', sans-serif;
+    width: 100%;
+    /* height: 100vh; */
+    letter-spacing: -0.04rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* transition: .5s; */
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px 50px;
+    z-index: 10;
+}
+
+header .logo {
+    
+}
+
+header .logo h1 {
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+header .logo h2 {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding-top: 5px;
+    color: #888;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    font-size: 0.8rem;
+    margin-left: 20px;
+}
+
+section h4 {
+    font-weight: 800;
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+    letter-spacing: -0.01rem;
+    color: #aaa;
+}
+
+
+/* 표지 cover */
+#cover {
+    height: 100vh;
+}
+#cover .title {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+}
+#cover h3 {
+    margin-left: 30px;
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 120%;
+}
+#cover .cover-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    /* background: #888; */
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 0 50px;
+    font-weight: 800;
+    z-index: 10;
+}
+#cover .cover-graphic .cir1 {
+    position: absolute;
+    top: 150px;
+    right: 300px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #4156CB;
+    z-index: 4;
+    box-shadow: 10px 10px 50px #4156CB;
+    /* transition: .3s; */
+}
+#cover .cover-graphic .cir2 {
+    position: absolute;
+    bottom: 100px;
+    right: 400px;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: #5980DB;
+    box-shadow: 10px 10px 50px #5980DB;
+    z-index: 3;
+    /* filter: blur(1px); */
+}
+#cover .cover-graphic .cir3 {
+    position: absolute;
+    top: 200px;
+    right: -50px;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    background-color: #5ECAC9;
+    box-shadow: 10px 10px 50px #5ECAC9;
+    z-index: 2;
+    /* filter: blur(2px); */
+}
+#cover .cover-graphic .cir4 {
+    position: absolute;
+    top: 100px;
+    right: 500px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #7ADDB8;
+    box-shadow: 10px 10px 50px #7ADDB8;
+    /* filter: blur(3px); */
+}
+
+
+/* 프로젝트 개요 project-overview  */
+#project-overview {
+    /* background: #eee; */
+    padding: 50px;
+}
+.subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 135%;
+}
+#project-overview ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+#project-overview ul li{
+    font-size: 0.85rem;
+    /* font-weight: 700; */
+    padding: 10px 0;
+}
+
+/* 데이터 개요 data-overview  */
+.data-overview {
+    padding: 50px;
+}
+.data-overview table {
+    width: 100%;
+}
+.data-overview tr {
+    height: 70px;
+}
+.data-overview tr td:nth-child(1) {
+    width: 120px;
+    font-weight: 800;
+}
+.data-overview tr:nth-child(5) {
+    height: 130px;
+}
+.data-overview tr img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+
+/* 데이터 전처리 data-preprocessing */
+.data-preprocessing {
+    background: #eee;
+    padding: 50px;
+}
+.data-preprocessing .subtitle {
+    height: 100px;
+}
+.data-preprocessing p {
+    text-align: center;
+    margin: 20px 0 60px;
+    font-weight: 700;
+}
+.data-preprocessing p span {
+    color: #888;
+}
+.data-preprocessing .datapre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: scroll; */
+}
+.data-preprocessing .datapre div:nth-child(2) {
+    padding-left: 30px;
+}  
+.data-preprocessing .datapre img {
+    max-height: 300px;
+}
+
+
+
+/* 전체 분석 결과 요약 summary-analysis */
+#summary-analysis {
+    background-color: #222;
+    color: #fff;
+}
+.summary {
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+}
+.sumCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 900px;
+    padding-bottom: 50px;
+}
+.sumCard {
+    background: #f4f4f4;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: #333;
+    transition: .2s;
+}
+.sumCard:hover {
+    background: #282828;
+}
+.sumCard>div:nth-child(1) {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+.sumCard:nth-child(4) {
+    grid-column: 1 / 3;
+	grid-row: 2 / 4;
+}
+.sumCard:nth-child(4) .sumContent li {
+    display: flex;
+    align-items: center;
+}
+.sumCard:nth-child(4) .sumContent li:not(:last-child) {
+    margin-bottom: 20px;
+}
+.sumCard:nth-child(4) .sumContent li .box {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.sumCard:nth-child(4) .sumContent li span:nth-child(2) {
+    color: #bbb;
+    font-weight: 500;
+    margin: 0 10px;
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(1) .box {
+    background: var(--code-G)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(1) span:last-child {
+    color: var(--level-1)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(2) .box {
+    background: var(--code-I)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(2) span:last-child {
+    color: var(--level-1)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(3) .box {
+    background: var(--code-J)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(3) span:last-child {
+    color: var(--level-1)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(4) .box {
+    background: var(--code-K)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(4) span:last-child {
+    color: var(--level-2)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(5) .box {
+    background: var(--code-L)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(5) span:last-child {
+    color: var(--level-1)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(6) .box {
+    background: var(--code-P)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(6) span:last-child {
+    color: var(--level-1)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(7) .box {
+    background: var(--code-Q)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(7) span:last-child {
+    color: var(--level-1)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(8) .box {
+    background: var(--code-R)
+}
+.sumCard:nth-child(4) .sumContent li:nth-child(8) span:last-child {
+    color: var(--level-1)
+}
+.sumCard:nth-child(5) .sumContent {
+    font-size: 1rem;
+}
+.sumCard:nth-child(5) .sumContent>div:not(:last-child) {
+    margin-bottom: 10px;
+}
+.sumCard:nth-child(5) .sumContent div:nth-child(1) {
+    color: var(--level-1);
+    font-size: 1.3rem;
+}
+.sumCard:nth-child(5) .sumContent div:nth-child(2) {
+    color: var(--level-2)
+}
+.sumCard:nth-child(5) .sumContent div:nth-child(3) {
+    color: var(--level-3)
+}
+.sumCard:nth-child(5) .sumContent div:nth-child(4) {
+    color: var(--level-4)
+}
+.sumCard:nth-child(7) {
+    grid-column: 1 / 4;
+}
+.sumCard:nth-child(7) .sumContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.sumCard:nth-child(7) .sumContent div {
+    font-weight: 500;
+    margin: 15px 0;
+    border-radius: 30px;
+}
+.sumCard .sumTitle {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+.sumCard .sumContent {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+
+/* 종합 분석 결과 comprehensive-analysis */
+#comprehensive-analysis {
+}
+.compre-analysis {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 70px 50px;
+}
+.compre-analysis h5{
+    font-size: 2rem;
+}
+
+/* 업종 결과 code-analysis */
+.code-analysis {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+}
+.code-analysis h5 {
+    font-size: 1.5rem;
+}
+.code-analysis h5 span{
+    color: #EC566A;
+}
+.code-analysis .codeGragh {
+    display: flex;
+    width: 130vw;
+    overflow: scroll;
+}
+.code-analysis p {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+.codeSelect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-bottom: 50px; */
+}
+.codeSelect div{
+    margin: 13px 0;
+}
+.codeSelect span {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 7px 17px;
+    margin: 0 5px;
+    cursor: pointer;
+    background: #f4f4f4;
+    font-size: 0.9rem;
+    color: #444;
+}
+.codeSelect span:hover {
+    background: #ccc;
+}
+.codeSelect span.active {
+    background: #000000;
+}
+
+
+.graphInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.graphInfo h5 {
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.graphInfo .label {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.graphInfo .label span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #bbb;
+    padding: 10px 20px;
+}
+.graphInfo .label span:nth-child(1) {
+    background: #f4f4f4;
+    border-right: none;
+    color: #444;
+}
+iframe {
+    width: 50%;
+}
+
+.byItems .graphInfo .label span:nth-child(1) {
+    border-bottom: none;
+    border-right: 1px solid #bbb;
+}
+.byItems .graphInfo .label  {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+
+/* 반응형 */
+@media screen and (max-width: 968px) {
+	#project-overview ul {display: block;}
+
+    .data-overview tr {height: 100px; display: flex; flex-direction: column; align-items: baseline;}
+    .data-overview tr td:nth-child(1) {width: 100%; margin-bottom: 10px;}
+
+
+    .compre-analysis { flex-direction: column;}
+    .graphInfo { width: 100%;}
+    iframe { width: 100%; }
+
+    .code-analysis .codeGragh { display: block; width: 100%;}
+}
+
+@media screen and (max-width: 500px) {
+
+    .data-preprocessing .datapre { flex-direction: column;}
+    .data-preprocessing .datapre div:nth-child(2) { margin-top: 30px }
+}
