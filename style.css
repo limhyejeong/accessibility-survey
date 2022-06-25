@@ -1,8 +1,4 @@
-@font-face {
-    font-family: 'NanumSquare';
-    src: url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css') format('woff');
-    font-style: normal;
-}
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
 :root {
     /* 수준 */
@@ -430,9 +426,6 @@ section h4 {
 .code-analysis h5 {
     font-size: 1.5rem;
 }
-.code-analysis h5 span{
-    color: #EC566A;
-}
 .code-analysis .codeGragh {
     display: flex;
     width: 130vw;
@@ -505,7 +498,8 @@ iframe {
 }
 .byItems .graphInfo .label  {
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 25px;
+    font-size: 0.8rem;
 }
 
 
