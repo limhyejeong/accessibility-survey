@@ -96,7 +96,7 @@ window.addEventListener('load', () => {
         elem.addEventListener('click', (e) => {
             let code = code_array[idx];
 
-            graphInfo.querySelector('h5').innerHTML = `<span style="color: var(--code-${code.code})">${code.name}</span>의 조사된 사이트는 총 ${code.count}개이며, 평균점수는 ${code.score}점으로 ${code.level}하다`;
+            graphInfo.querySelector('h5').innerHTML = `<span style="color: var(--code-${code.code})">${code.name}</span>의 조사된 사이트는 총 ${code.count}개이며, 평균점수는 ${code.score}점으로 ${code.level}하다.`;
     
             iframes[0].src = `./charts/${code.code}_result_plot.html`;
             iframes[1].src = `./charts/${code.code}_score_plot.html`;
