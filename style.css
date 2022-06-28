@@ -83,7 +83,7 @@ header ul li {
     font-size: 0.8rem;
     text-align: center;
     width: 100px;
-    height: 50px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,7 +110,7 @@ header ul li:nth-child(2) ul {
     display: none;
     flex-direction: column;
     transition: .5s;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 header ul li:nth-child(2):hover ul {
     display: flex;
@@ -584,9 +584,16 @@ iframe {
 }
 
 
+#correlation-analysis {
+    border-top: 1px solid #eee;
+}
+
+
 /* 상관 관계 비교 Correlation Analysis */
 .cor-analysis {
     text-align: center;
+    border-bottom: 1px solid #eee;
+    padding: 100px 50px;
 }
 .cor-analysis h5 {
     font-size: 1.2rem;
@@ -601,7 +608,7 @@ iframe {
 
 /* 업종 별 웹 접근성 점수 분포 distribution Analysis */
 .cor-analysis.byScore {
-    padding: 100px 50px;
+    /* padding: 100px 50px; */
 }
 .cor-analysis.byScore ul {
     width: 100%;
@@ -629,7 +636,7 @@ iframe {
 
 /* 업종 별 점수와 사이트 수의 상관관계 */
 .cor-analysis.byCount {
-    padding: 100px 50px;
+    /* padding: 100px 50px; */
     display: flex;
 }
 .cor-analysis.byCount p {
@@ -658,7 +665,7 @@ iframe {
     text-align: center;
     border-radius: 25px;
     border: 2px dashed #ddd;
-    padding: 20px;
+    padding: 30px 0;
     width: 100%;
 }
 #insight .lowList h6 { 
@@ -718,6 +725,7 @@ iframe {
 .solution {
     background: #222;
     color: #fff;
+    padding: 100px 50px;
 }
 .solution .sols {
     display: flex;
@@ -740,6 +748,11 @@ iframe {
     font-size: 2rem;
     font-weight: 300;
     margin-bottom: 20px;
+}
+
+.service {
+    padding: 100px 50px;
+    /* text-align: center; */
 }
 
 
