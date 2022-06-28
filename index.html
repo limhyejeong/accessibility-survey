@@ -23,18 +23,18 @@
             <li>
                 <a href="#summary-analysis">데이터 분석 결과</a>
                 <ul>
-                    <li><a href="#summary-analysis">종합 분석</a></li>
+                    <li><a href="#comprehensive-analysis">종합 분석</a></li>
                     <li><a href="#code-analysis">업종 별 분석</a></li>
-                    <li><a href="#comprehensive-analysis">비교 및 상관관계</a></li>
+                    <li><a href="#correlation-analysis">비교 및 상관관계</a></li>
                 </ul>
             </li>
-            <li><a href="#solution">솔루션 제안</a></li>
+            <li><a href="#insight">결론 도출</a></li>
         </ul>
     </header>
 
     <section id="cover">
         <div class="title">
-            <h3>정보 접근성 관련 정책을 위한<br/><b>웹 접근성</b> 실태 조사 분석 보고서</h3>
+            <h3>정보 접근성 관련 정책을 위한<br /><b>웹 접근성</b> 실태 조사 분석 보고서</h3>
         </div>
 
         <div class="cover-graphic">
@@ -76,19 +76,24 @@
         <table>
             <tbody>
                 <tr>
-                    <td>조사 목적</td><td>웹 사이트에 대한 접근성 실태 파악을 통한 장애인, 고령자 등 취약계층의 정보 접근성 향상 정책 수립 배경 자료로 활용</td>
+                    <td>조사 목적</td>
+                    <td>웹 사이트에 대한 접근성 실태 파악을 통한 장애인, 고령자 등 취약계층의 정보 접근성 향상 정책 수립 배경 자료로 활용</td>
                 </tr>
                 <tr>
-                    <td>조사 대상</td><td>웹 사이트 활용도가 높은 8대 산업분야 웹 사이트 1,000개</td>
+                    <td>조사 대상</td>
+                    <td>웹 사이트 활용도가 높은 8대 산업분야 웹 사이트 1,000개</td>
                 </tr>
                 <tr>
-                    <td>조사 기준</td><td>한국형 웹 콘텐츠 접근성 지침 2.1(국가표준)</td>
+                    <td>조사 기준</td>
+                    <td>한국형 웹 콘텐츠 접근성 지침 2.1(국가표준)</td>
                 </tr>
                 <tr>
-                    <td>조사 기간</td><td>2018년 12년 17일 ~ 2019년 3월 15일</td>
+                    <td>조사 기간</td>
+                    <td>2018년 12년 17일 ~ 2019년 3월 15일</td>
                 </tr>
                 <tr>
-                    <td>조사 기관</td><td>
+                    <td>조사 기관</td>
+                    <td>
                         <a href="https://www.msit.go.kr/index.do">
                             <img src="./img/msit.png" alt="과학기술정보통신부">
                         </a>
@@ -98,10 +103,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>데이터 형식</td><td>웹접근성실태조사 (csv)</td>
+                    <td>데이터 형식</td>
+                    <td>웹접근성실태조사 (csv)</td>
                 </tr>
                 <tr>
-                    <td>데이터 출처</td><td><a href="https://mdis.kostat.go.kr/">https://mdis.kostat.go.kr/</a></td>
+                    <td>데이터 출처</td>
+                    <td><a href="https://mdis.kostat.go.kr/">https://mdis.kostat.go.kr/</a></td>
                 </tr>
             </tbody>
         </table>
@@ -113,7 +120,7 @@
 
         <p>
             만점 값을 100점으로 통일한 데이터셋 생성
-            <br/>
+            <br />
             <span>* 소수점 둘째자리 이하부터 버림</span>
         </p>
 
@@ -142,12 +149,12 @@
                 <div class="sumTitle">조사한 웹사이트</div>
                 <div class="sumContent">1,000개</div>
             </div>
-    
+
             <div class="sumCard">
                 <div class="sumTitle">전체 평균 점수</div>
                 <div class="sumContent">66.6점</div>
             </div>
-    
+
             <div class="sumCard">
                 <div class="sumTitle">업종 분류 수</div>
                 <div class="sumContent">8개</div>
@@ -157,14 +164,30 @@
                 <div class="sumTitle">조사 업종 웹 접근성 수준</div>
                 <div class="sumContent">
                     <ul>
-                        <li><div class="box"></div>G. 도매 및 소매업 <span>62.9점</span> <span>미흡</span></li>
-                        <li><div class="box"></div>I. 숙박 및 음식점업 <span>65.2점</span> <span>미흡</span></li>
-                        <li><div class="box"></div>J. 출판, 영상,방송통신 및 정보서비스업 <span>66.5점</span> <span>미흡</span></li>
-                        <li><div class="box"></div>K. 금융 및 보험업 <span>79.9점</span> <span>보통</span></li>
-                        <li><div class="box"></div>L. 부동산업 및 임대업 <span>62.1점</span> <span>미흡</span></li>
-                        <li><div class="box"></div>P. 교육 서비스업 <span>66.4점</span> <span>미흡</span></li>
-                        <li><div class="box"></div>Q. 보건업 및 사회복지 서비스업 <span>64.8점</span> <span>미흡</span></li>
-                        <li><div class="box"></div>R. 예술, 스포츠 및 여가관련 서비스업 <span>65.6점</span> <span>미흡</span></li>
+                        <li>
+                            <div class="box"></div>G. 도매 및 소매업 <span>62.9점</span> <span>미흡</span>
+                        </li>
+                        <li>
+                            <div class="box"></div>I. 숙박 및 음식점업 <span>65.2점</span> <span>미흡</span>
+                        </li>
+                        <li>
+                            <div class="box"></div>J. 출판, 영상,방송통신 및 정보서비스업 <span>66.5점</span> <span>미흡</span>
+                        </li>
+                        <li>
+                            <div class="box"></div>K. 금융 및 보험업 <span>79.9점</span> <span>보통</span>
+                        </li>
+                        <li>
+                            <div class="box"></div>L. 부동산업 및 임대업 <span>62.1점</span> <span>미흡</span>
+                        </li>
+                        <li>
+                            <div class="box"></div>P. 교육 서비스업 <span>66.4점</span> <span>미흡</span>
+                        </li>
+                        <li>
+                            <div class="box"></div>Q. 보건업 및 사회복지 서비스업 <span>64.8점</span> <span>미흡</span>
+                        </li>
+                        <li>
+                            <div class="box"></div>R. 예술, 스포츠 및 여가관련 서비스업 <span>65.6점</span> <span>미흡</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -192,16 +215,16 @@
             <div class="sumCard">
                 <div class="sumTitle">잘 지켜지지 않고 있는 항목 (50점 이하)</div>
                 <div class="sumContent">
-                    <div>❌  적절한 대체 텍스트</div>
-                    <div>❌  반복 영역 건너뛰기</div>
-                    <div>❌  레이블 제공</div>
-                    <div>❌  키보드 사용보장</div>
-                    <div>❌  텍스트 콘텐츠 명도 대비</div>
-                    <div>❌  제목 제공</div>
+                    <div>❌ 적절한 대체 텍스트</div>
+                    <div>❌ 반복 영역 건너뛰기</div>
+                    <div>❌ 레이블 제공</div>
+                    <div>❌ 키보드 사용보장</div>
+                    <div>❌ 텍스트 콘텐츠 명도 대비</div>
+                    <div>❌ 제목 제공</div>
                 </div>
             </div>
         </div>
-        
+
     </section>
 
 
@@ -219,13 +242,14 @@
             <div class="label"><span><b>전체 평균 점수</b></span><span>66.6점</span></div>
             <p>
                 총 1,000개 웹사이트에 대한 접근성 조사 결과
-                평균 66.6점으로,<br/>
-                <b>74.3%에 달하는 웹사이트가 75점 미만의 ‘미흡’</b> 수준으로 나타나<br/>
+                평균 66.6점으로,<br />
+                <b>74.3%에 달하는 웹사이트가 75점 미만의 ‘미흡’</b> 수준으로 나타나<br />
                 웹 접근성 개선의 필요성이 높은 것으로 분석되었다.
             </p>
         </div>
-        
-        <iframe src="./charts/result_count_plot.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+
+        <iframe src="./charts/result_count_plot.html" width="700" height="500" frameborder="0" framespacing="0"
+            marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </section>
 
     <!-- 종합 분석 - 2.업종 별 결과 -->
@@ -234,11 +258,13 @@
             <h4>Results by industry</h4>
             <h5>업종 별 결과</h5>
             <p>
-                대부분의 업종이 평균 60점대로 웹 접근성 수준이 저조했으나,<br/><b>’K. 금융 및 보험업’이 평균 77.9점</b>으로<br/>상대적으로 웹 접근성 수준이 높은 것으로 나타났다.
+                대부분의 업종이 평균 60점대로 웹 접근성 수준이 저조했으나,<br /><b>’K. 금융 및 보험업’이 평균 77.9점</b>으로<br />상대적으로 웹 접근성 수준이 높은 것으로
+                나타났다.
             </p>
         </div>
-        
-        <iframe src="./charts/code_score_plot.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+
+        <iframe src="./charts/code_score_plot.html" width="700" height="500" frameborder="0" framespacing="0"
+            marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </section>
 
     <!-- 종합 분석 - 3.항목 별 결과 -->
@@ -246,11 +272,17 @@
         <div class="graphInfo">
             <h4>Results by item</h4>
             <h5>항목 별 결과</h5>
-            <div class="label"><span><b>100점 항목</b></span><span><p>- 콘텐츠 간 구분<br/>- 깜빡임과 번쩍임 사용 제한</p></span></div>
-            <div class="label"><span><b>50점 미만 항목</b></span><span><p>- 적절한 대체 텍스트<br/>- 텍스트 콘텐츠 명도 대비<br/>- 키보드 사용보장<br/>- 반복 영역 건너뛰기<br/>- 제목 제공<br/>- 레이블 제공</p></span></div>
+            <div class="label"><span><b>100점 항목</b></span><span>
+                    <p>- 콘텐츠 간 구분<br />- 깜빡임과 번쩍임 사용 제한</p>
+                </span></div>
+            <div class="label"><span><b>50점 미만 항목</b></span><span>
+                    <p>- 적절한 대체 텍스트<br />- 텍스트 콘텐츠 명도 대비<br />- 키보드 사용보장<br />- 반복 영역 건너뛰기<br />- 제목 제공<br />- 레이블 제공
+                    </p>
+                </span></div>
         </div>
-        
-        <iframe src="./charts/score_df_plot.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+
+        <iframe src="./charts/score_df_plot.html" width="700" height="500" frameborder="0" framespacing="0"
+            marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </section>
 
     <!-- 종합 분석 - 4.원칙 별 결과 -->
@@ -258,15 +290,16 @@
         <div class="graphInfo">
             <h4>Results by item</h4>
             <h5>원칙 별 결과</h5>
-            <p>웹 접근성의 네가지 원칙으로 나누어 보았을 때는<br/>
-                2. 운용의 용이성(8~16번 항목) 원칙이 가장 낮게 나타났지만,<br/><br/>
-                전체 사이트의 웹 접근성 수준이 미흡한 것에 비하여<br/>
-                모든 원칙의 점수가 골고루 배점되었다.<br/><br/>
-                어느 한 가지 원칙에서 특히 미흡하다기보다는<br/>
+            <p>웹 접근성의 네가지 원칙으로 나누어 보았을 때는<br />
+                2. 운용의 용이성(8~16번 항목) 원칙이 가장 낮게 나타났지만,<br /><br />
+                전체 사이트의 웹 접근성 수준이 미흡한 것에 비하여<br />
+                모든 원칙의 점수가 골고루 배점되었다.<br /><br />
+                어느 한 가지 원칙에서 특히 미흡하다기보다는<br />
                 모든 원칙의 항목 중 일부 항목의 점수가 낮은 것을 알 수 있다.</p>
         </div>
-        
-        <iframe src="./charts/prin_score_plot.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+
+        <iframe src="./charts/prin_score_plot.html" width="700" height="500" frameborder="0" framespacing="0"
+            marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </section>
 
 
@@ -281,7 +314,8 @@
             <span>G.도매 및 소매업</span><span>I. 숙박 및 음식점업</span><span>J. 출판, 영상,방송통신 및 정보서비스업</span><span>K. 금융 및 보험업</span>
         </div>
         <div>
-            <span>L. 부동산업 및 임대업</span><span>P. 교육 서비스업</span><span>Q. 보건업 및 사회복지 서비스업</span><span>R. 예술, 스포츠 및 여가관련 서비스업</span>
+            <span>L. 부동산업 및 임대업</span><span>P. 교육 서비스업</span><span>Q. 보건업 및 사회복지 서비스업</span><span>R. 예술, 스포츠 및 여가관련
+                서비스업</span>
         </div>
     </div>
 
@@ -290,29 +324,33 @@
         <div class="graphInfo">
             <h5><span style="color: var(--code-G)">G.도매 및 소매업</span>의 조사된 사이트는 총 110개이며, 평균점수는 62.9점으로 미흡하다.</h5>
         </div>
-        
+
         <div class="codeGragh">
             <div class="iframe-list">
-                <iframe src="./charts/G_result_plot.html" width="800" height="300" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-                <iframe src="./charts/G_score_plot.html" width="800" height="300" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-                <iframe src="./charts/G_prin_plot.html" width="800" height="300" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+                <iframe src="./charts/G_result_plot.html" width="800" height="300" frameborder="0" framespacing="0"
+                    marginheight="0" marginwidth="0" scrolling="no"></iframe>
+                <iframe src="./charts/G_score_plot.html" width="800" height="300" frameborder="0" framespacing="0"
+                    marginheight="0" marginwidth="0" scrolling="no"></iframe>
+                <iframe src="./charts/G_prin_plot.html" width="800" height="300" frameborder="0" framespacing="0"
+                    marginheight="0" marginwidth="0" scrolling="no"></iframe>
             </div>
-         </div>
+        </div>
 
-        <p>23개 조사 항목 에서는 '적절한 대체 텍스트 제공', '키보드 사용 보장', '반복 영역 건너뛰기', '레이블 제공' 항목이 낮은 점수를 받았다.<br/>
-            쇼핑몰 사이트 특성상 이미지를 사용하다 보니 적절한 대체 텍스트나 제목, 레이블 제공 등의 항목이 낮게 평가된 걸로 판단된다.<br/>
+        <p>23개 조사 항목 에서는 '적절한 대체 텍스트 제공', '키보드 사용 보장', '반복 영역 건너뛰기', '레이블 제공' 항목이 낮은 점수를 받았다.<br />
+            쇼핑몰 사이트 특성상 이미지를 사용하다 보니 적절한 대체 텍스트나 제목, 레이블 제공 등의 항목이 낮게 평가된 걸로 판단된다.<br />
             장애인 등이 보다 쉽게 접근할 수 있도록 ‘반복 영역 건너뛰기’, ‘키보드 사용 보장’ 등 키보드 사용 접근성 개선이 요구된다.</p>
     </section>
 
-    <!-- *** 상관 관계 비교 *** -->
-    <section id="comprehensive-analysis">
+    <!-- *** 상관 관계 비교 correlation *** -->
+    <section id="correlation-analysis">
         <div class="subtitle">상관 관계 비교</div>
     </section>
 
 
     <!-- 상관 관계 비교 Correlation Analysis -->
     <section class="cor-analysis">
-        <iframe src="./charts/survey_df_plot3.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+        <iframe src="./charts/survey_df_plot3.html" width="700" height="500" frameborder="0" framespacing="0"
+            marginheight="0" marginwidth="0" scrolling="no"></iframe>
 
         <p>
             웹 접근성 점수 분포도를 봤을 때 연두색의 J. 출판, 영상, 방송통신 및 정보서비스업 업종이 눈에 띄게 많은 것을 알 수 있다.
@@ -320,59 +358,129 @@
     </section>
 
 
-    <section class="cor-analysis">
-        <h5>업종 별 점수 분포</h5>
-        <div>
-            <ul>
-                <li>vl</li>
-                <li>box</li>
-                <li>ji</li>
-            </ul>
-        </div>
-        <div class="iframe-list">
-            <iframe src="./charts/code_plot_vl.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-            <iframe src="./charts/code_plot_box.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-            <iframe src="./charts/code_plot_ji.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-        </div>
+    <section class="cor-analysis byScore">
+        <h5>그래픽 스타일</h5>
+        <ul>
+            <li>vl</li>
+            <li class="active">bo</li>
+            <li>ji</li>
+        </ul>
+        <iframe src="./charts/code_plot_2.html" width="700" height="500" frameborder="0" framespacing="0"
+            marginheight="0" marginwidth="0" scrolling="no"></iframe>
 
         <p>
-        업종 코드 별로 보았을 때, 60~80점 사이가 많은 타 업종에 비하여,<br/>
-        K. 금융 및 보험업 분야에서 높은 점수의 웹사이트의 비율이 높은 것으로 분석되었다.
+            업종 코드 별로 보았을 때, 60~80점 사이가 많은 타 업종에 비하여,<br />
+            K. 금융 및 보험업 분야에서 높은 점수의 웹사이트의 비율이 높은 것으로 분석되었다.
         </p>
     </section>
 
 
     <!-- 업종 점수와 사이트 수의 관계 -->
     <section class="cor-analysis byCount">
-        <iframe src="./charts/count_score_plot.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+        <iframe src="./charts/count_score_plot.html" width="700" height="500" frameborder="0" framespacing="0"
+            marginheight="0" marginwidth="0" scrolling="no"></iframe>
 
         <div class="graphInfo">
-            <h4>Results by item</h4>
-            <h5>원칙 별 결과</h5>
-            <p>사이트수가제일많은J = 다른업종과평균점수가비슷함<br/>
-                <br/>
-                평균점수가제일높은K=조사된사이트수는다른업종과비슷함<br/>
-                전체 웹 사이트 중 50%를 차지하는 업종인<br/>
-                J. 출판,영상,방송통신 및 정보서비스업의 평균 점수는 다른 업종과 비슷했다.<br/>
-                평균 점수가 79.9점으로 제일 높은<br/>
-                <br/>
-                K. 금융 및 보험업 또한 조사된 사이트 수는 다른 업종과 비슷했다.<br/>
-                <br/>
-                업종 별 사이트 수와 평균 점수는 관련이 없는 것으로 나타났다.</p>
+            <h5>업종 별 점수와 사이트 수의 상관관계</h5>
+
+            <p>사이트수가제일많은J = 다른업종과평균점수가비슷함<br />
+                <br />
+                평균점수가제일높은K=조사된사이트수는다른업종과비슷함<br />
+                전체 웹 사이트 중 50%를 차지하는 업종인<br />
+                J. 출판,영상,방송통신 및 정보서비스업의 평균 점수는 다른 업종과 비슷했다.<br />
+                평균 점수가 79.9점으로 제일 높은<br />
+                <br />
+                K. 금융 및 보험업 또한 조사된 사이트 수는 다른 업종과 비슷했다.<br />
+                <br />
+                업종 별 사이트 수와 평균 점수는 관련이 없는 것으로 나타났다.
+            </p>
         </div>
     </section>
+
 
     <!-- 업종 별 수준 -->
     <section class="cor-analysis byLevel">
         <h5>업종 별 웹 접근성 수준</h5>
-        <iframe src="./charts/code_com_plot.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-        <iframe src="./charts/code_per_plot.html" width="700" height="500" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+
+        <div class="iframe-list">
+            <iframe src="./charts/code_com_plot.html" width="700" height="500" frameborder="0" framespacing="0"
+                marginheight="0" marginwidth="0" scrolling="no"></iframe>
+            <iframe src="./charts/code_per_plot.html" width="700" height="500" frameborder="0" framespacing="0"
+                marginheight="0" marginwidth="0" scrolling="no"></iframe>
+        </div>
+
     </section>
 
 
     <!-- 솔루션 제안 -->
-    <section id="solution">
-        
+    <section id="insight">
+        <div class="subtitle">
+            모두 장애인에게 큰 영향을 미치는 항목이지만,<br />해당 요소를 고려되지 않고 설계된 웹 사이트가 대부분
+        </div>
+
+        <div class="lowList">
+            <h6>50점 이하의 점수를 받은 항목</h6>
+            <ul>
+                <li>적절한 대체 텍스트</li>
+                <li>반복 영역 건너뛰기</li>
+                <li>레이블 제공</li>
+                <li>키보드 사용보장</li>
+                <li>텍스트 콘텐츠 명도 대비</li>
+                <li>제목 제공</li>
+            </ul>
+        </div>
+
+        <div class="disorders">
+            <div class="disName">전맹 시각 장애</div>
+            <div class="disInfo">
+                <p>시력이 거의 없어 청각 또는 촉각으로 웹을 이용한다.<br />
+                    청각적으로 스크린리더기를 이용하거나, 촉각적으로 점자 정보 단말기를 통해 손으로 점자를 읽는다.</p>
+            </div>
+            <span>이미지에 대한 적절한 대체텍스트 필요</span>
+
+            <div class="disName">저시력 시각 장애</div>
+            <div class="disInfo">
+                <p>시력 저하, 시야 장애인은 뿌옇게 보이거나 페이지의 일부만 확대하여 보고 인식할 수 있다.<br />
+                    색약, 색맹 장애인은 색상 분별에 어려움을 겪으므로, 고대비를 사용해야 한다.</p>
+            </div>
+            <span>확대 기능, 텍스트 및 콘텐츠의 명도 대비 필요</span>
+
+            <div class="disName">손 운동 장애</div>
+            <div class="disInfo">
+                <p>한 손만 사용 가능한 장애 환경으로 키보드만으로 사이트를 사용한다.</p>
+            </div>
+            <span>키보드 한 손 조작에 대한 사용성 보장 필요</span>
+
+            <div class="disName">청각 장애</div>
+            <div class="disInfo">
+                <p>안내문구 또는 자막을 이용하여 화면의 글씨를 읽는다.</p>
+            </div>
+            <span>오디오 없이 이해할 수 있는 대체 기능 필요</span>
+
+        </div>
+    </section>
+
+    <section class="solution">
+        <div class="subtitle">
+            관련 정책 제시
+        </div>
+
+        <div class="sols">
+            <span>
+                <h6>필요성 인식 개선</h6>
+                <p>기업에게 홍보, 교육 등의 활동을 강화하여,<br />
+                    웹 접근성 준수가 법적인 의무사항임을 알리며 꾸준히 노력</p>
+            </span>
+            <span>
+                <h6>인센티브 제도 도입</h6>
+                <p>웹 접근성을 준수한 기업에 대한 가점을 부여하는 등<br />
+                    인센티브 제도를 도입한다면 웹 접근성 홍보에 도움이 될 것</p>
+            </span>
+        </div>
+    </section>
+
+    <section class="service">
+
     </section>
 
 </body>

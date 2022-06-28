@@ -58,7 +58,7 @@ header {
     justify-content: space-between;
     /* transition: .5s; */
     background: rgba(255, 255, 255, 0.5);
-    padding: 20px 50px;
+    padding: 0 50px;
     z-index: 10;
 }
 header .logo {
@@ -78,10 +78,26 @@ header ul {
     display: flex;
 }
 header ul li {
+    height: 50px;
     position: relative;
     font-size: 0.8rem;
     text-align: center;
-    padding-left: 50px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+header ul li a { 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header ul li:hover {
+    background: #eee;
 }
 header ul li:nth-child(2) {
     display: flex;
@@ -90,26 +106,28 @@ header ul li:nth-child(2) {
 header ul li:nth-child(2) ul {
     width: 100%;
     position: absolute;
+    top: 0;
     display: none;
     flex-direction: column;
     transition: .5s;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 header ul li:nth-child(2):hover ul {
     display: flex;
 }
-header ul li:nth-child(2) ul:hover {
-    display: flex;
-}
 header ul li:nth-child(2) ul li {
+    width: 100%;
+    height: 30px;
     font-size: 0.75rem;
     font-weight: 500;
-    padding: 10px;
-    background: rgba(240, 240, 240, 0.3);
-    border-bottom: 1px solid #ddd;
+    /* padding: 10px; */
+    background: rgba(250, 250, 250, 0.9);
 }
-header ul li:nth-child(2) ul li a {
-    /* color: #fff; */
+header ul li:nth-child(2) ul li:hover {
+    background: rgba(250, 250, 250, 1);
+}
+header ul li:nth-child(2) ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 section h4 {
@@ -476,7 +494,7 @@ section h4 {
 }
 .code-analysis .codeGragh .iframe-list {
     display: flex;
-    width: 1800px;
+    /* width: 1800px; */
 }
 .code-analysis p {
     background: #f4f4f4;
@@ -487,6 +505,12 @@ section h4 {
 .code-analysis iframe {
     padding-right: 20px;
     border-right: 1px solid #eee;
+    transition: .2s;
+    opacity: 0.7;
+}
+.code-analysis iframe:hover {
+    opacity: 1;
+    width: 2000px;
 }
 .codeSelect {
     display: flex;
@@ -520,6 +544,7 @@ section h4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: baseline;
 }
 .graphInfo h5 {
     font-weight: 700;
@@ -544,7 +569,6 @@ section h4 {
 iframe {
     /* width: 50%; */
 }
-
 .byItems .graphInfo .label span:nth-child(1) {
     border-bottom: none;
     border-right: 1px solid #bbb;
@@ -554,52 +578,170 @@ iframe {
     margin-bottom: 25px;
     font-size: 0.8rem;
 }
+.iframe-list {
+    width: 100%;
+    display: flex;
+}
 
 
 /* 상관 관계 비교 Correlation Analysis */
 .cor-analysis {
-
+    text-align: center;
 }
-
-/* 업종 별 웹 접근성 점수 분포 distribution Analysis */
-.cor-analysis {
-    padding: 100px 50px;
-}
-.cor-analysis .iframe-list {
-    width: 100%;
-    display: flex;
-}
-.cor-analysis .iframe-list iframe {
-    width: 500px;
-    transition: .2s;
-    border: 1px solid #eee;
-    padding: 10px;
-    opacity: 0.3;
-}
-.dcor-analysis .iframe-list iframe:hover {
-    opacity: 1;
-    width: 1200px;
+.cor-analysis h5 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 .cor-analysis p {
     text-align: center;
     /* background: #eee; */
-
 }
+
+
+
+/* 업종 별 웹 접근성 점수 분포 distribution Analysis */
+.cor-analysis.byScore {
+    padding: 100px 50px;
+}
+.cor-analysis.byScore ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #aaa;
+}
+.cor-analysis.byScore ul li {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.cor-analysis.byScore ul li.active {
+    background: #eee;
+}
+.cor-analysis.byScore ul li:not(:last-child) {
+    border-right: 1px solid #aaa;
+}
+
+
 
 /* 업종 별 점수와 사이트 수의 상관관계 */
 .cor-analysis.byCount {
+    padding: 100px 50px;
     display: flex;
+}
+.cor-analysis.byCount p {
+    text-align: left;
 }
 
 /* 업종 별 수준 비율 */
 .cor-analysis.byLevel {
-    display: flex;
+    /* display: flex; */
     padding: 100px 50px;
 }
 .cor-analysis.byLevel iframe {
     padding: 10px;
     border-right: 1px dashed #ccc;
 }
+
+
+/* 인사이트 */
+#insight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 100px;
+}
+#insight .lowList {
+    text-align: center;
+    border-radius: 25px;
+    border: 2px dashed #ddd;
+    padding: 20px;
+    width: 100%;
+}
+#insight .lowList h6 { 
+    font-weight: 700;
+    font-size: 1rem;
+    color: #333;
+}
+#insight .lowList ul {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+#insight .lowList ul li {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    /* border: 1px solid #aaa; */
+    border-radius: 15px;
+    background: #eee;
+    margin: 0 5px;
+}
+#insight .disorders {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    margin-top: 30px;
+}
+#insight .disorders span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    line-height: 150%;
+    margin-left: 10px;
+}
+#insight .disName {
+    font-weight: 800;
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+#insight .disInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+#insight .disInfo p {
+    font-size: 0.9rem;
+    line-height: 150%;
+}
+
+
+/* 솔루션 */
+.solution {
+    background: #222;
+    color: #fff;
+}
+.solution .sols {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.solution .sols span {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #393939;
+    border-radius: 50%;
+    background: #333;
+}
+.solution h6 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
 
 
 /* 반응형 */
@@ -617,6 +759,7 @@ iframe {
     .code-analysis { padding: 20px; }
     /* .code-analysis .codeGragh { display: block; width: 100%;} */
     .code-analysis .codeGragh .iframe-list { display: block; width: 100%;}
+    .code-analysis .codeGragh .iframe-list { opacity: 1; }
 
 }
 

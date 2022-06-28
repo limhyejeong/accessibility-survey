@@ -76,6 +76,7 @@ const code_array = [
         여가관련 서비스업은 노인과 장애인의 이용 빈도가 낮을 것으로 예상되어 웹 접근성 개선 의지 또한 낮을 것으로 판단된다.`
     },
 ];
+const viewStyles = document.querySelectorAll('.cor-analysis.byScore ul li')
 
 const iframes = document.querySelectorAll('.code-analysis iframe');
 
@@ -106,5 +107,17 @@ window.addEventListener('load', () => {
         })
     });
 
+    console.log(viewStyles);
     
+    let style = 1;
+    // 업종 별 점수 분포 보기 방법
+    viewStyles.forEach((elem, idx) => {
+        elem.addEventListener('click', (e) => {
+            elem.classList.add('active');
+            viewStyles[style].classList.remove('active');
+            style = idx;
+            document.querySelector('.cor-analysis.byScore iframe').src = `./charts/code_plot_${idx+1}.html`;
+        })
+    });
+
 });
