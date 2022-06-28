@@ -133,7 +133,7 @@ header ul li:nth-child(2) ul li:not(:last-child) {
 section h4 {
     font-weight: 800;
     font-size: 0.8rem;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     letter-spacing: -0.01rem;
     color: #aaa;
 }
@@ -221,11 +221,14 @@ section h4 {
 
 /* 프로젝트 개요 project-overview  */
 #project-overview {
-    /* background: #eee; */
     padding: 50px;
+}
+#project-overview p {
+    text-align: center;
 }
 .subtitle {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -472,7 +475,10 @@ section h4 {
     border-bottom: 1px solid #eee;
     padding: 70px 50px;
 }
-.compre-analysis h5{
+.compre-analysis h4 {
+    margin-bottom: 20px;
+}
+.compre-analysis h5 {
     font-size: 2rem;
 }
 
@@ -658,7 +664,6 @@ iframe {
 #insight {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 50px 100px;
 }
 #insight .lowList {
