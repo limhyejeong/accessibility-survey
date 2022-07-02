@@ -1,3 +1,4 @@
+const loading = document.querySelector('.loading');
 const cir = document.querySelector('.cover-graphic');
 const cirs = document.querySelectorAll('.cover-graphic div');
 const codes = document.querySelectorAll('.codeSelect span');
@@ -77,10 +78,12 @@ const code_array = [
     },
 ];
 const viewStyles = document.querySelectorAll('.cor-analysis.byScore ul li')
-
 const iframes = document.querySelectorAll('.code-analysis iframe');
 
 window.addEventListener('load', () => {
+
+    // loading page
+    loading.style.display = 'none';
 
     // cover interaction
     window.addEventListener('scroll', (e) => {

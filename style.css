@@ -49,6 +49,21 @@ body {
     letter-spacing: -0.04rem;
 }
 
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    font-size: 3rem;
+    background: #fff;
+    /* color: #fff; */
+    z-index: 100;
+    overflow: hidden;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -651,11 +666,12 @@ iframe {
 
 /* 업종 별 수준 비율 */
 .cor-analysis.byLevel {
-    /* display: flex; */
     padding: 100px 50px;
 }
 .cor-analysis.byLevel iframe {
     padding: 10px;
+}
+.cor-analysis.byLevel iframe:nth-child(1) {
     border-right: 1px dashed #ccc;
 }
 
@@ -782,7 +798,6 @@ iframe {
 }
 
 @media screen and (max-width: 500px) {
-
     .data-preprocessing .datapre { flex-direction: column;}
     .data-preprocessing .datapre div:nth-child(2) { margin-top: 30px }
 }
