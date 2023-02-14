@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>웹 접근성 조사</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="./matter.min.js"></script>
+    <script defer src="./cover-matter.js"></script>
     <script defer src="./script.js"></script>
 </head>
 
@@ -14,10 +16,10 @@
 
     <!-- Loading Page -->
     <div class="loading">
-        Loading .. 
+        Loading ..
     </div>
 
-    <header>
+    <!-- <header>
         <a href="#cover" class="logo">
             <h1>The Report on Web Accessibility</h1>
             <h2>웹 접근성 실태 파악</h2>
@@ -35,24 +37,21 @@
             </li>
             <li><a href="#insight">결론 도출</a></li>
         </ul>
-    </header>
+    </header> -->
 
     <section id="cover">
         <div class="title">
+            <div>2022 Big Data</div>
             <h3>정보 접근성 관련 정책을 위한<br /><b>웹 접근성</b> 실태 조사 분석 보고서</h3>
         </div>
-
-        <div class="cover-graphic">
+        <div class="canvas"></div>
+        <!-- <div class="cover-graphic">
             <div class="cir1"></div>
             <div class="cir2"></div>
             <div class="cir3"></div>
             <div class="cir4"></div>
-        </div>
+        </div> -->
 
-        <div class="cover-footer">
-            <span>2022</span>
-            <span>Big Data</span>
-        </div>
     </section>
 
     <section id="project-overview">
@@ -241,7 +240,8 @@
     <section id="comprehensive-analysis">
         <div class="subtitle">
             <h4>Comprehensive Analysis</h4>
-            종합 분석 결과</div>
+            종합 분석 결과
+        </div>
     </section>
 
     <!-- 종합 분석 - 1.수준 비율 -->
@@ -282,13 +282,17 @@
         <div class="graphInfo">
             <h4>Results by item</h4>
             <h5>항목 별 결과</h5>
-            <div class="label"><span><b>100점 항목</b></span><span>
-                    <p>- 콘텐츠 간 구분<br />- 깜빡임과 번쩍임 사용 제한</p>
-                </span></div>
-            <div class="label"><span><b>50점 미만 항목</b></span><span>
-                    <p>- 적절한 대체 텍스트<br />- 텍스트 콘텐츠 명도 대비<br />- 키보드 사용보장<br />- 반복 영역 건너뛰기<br />- 제목 제공<br />- 레이블 제공
-                    </p>
-                </span></div>
+
+            <div class="labels">
+                <div class="label"><span><b>100점 항목</b></span><span>
+                        <p>- 콘텐츠 간 구분<br />- 깜빡임과 번쩍임 사용 제한</p>
+                    </span></div>
+                <div class="label"><span><b>50점 미만 항목</b></span><span>
+                        <p>- 적절한 대체 텍스트<br />- 텍스트 콘텐츠 명도 대비<br />- 키보드 사용보장<br />- 반복 영역 건너뛰기<br />- 제목 제공<br />- 레이블
+                            제공
+                        </p>
+                    </span></div>
+            </div>
         </div>
 
         <iframe src="./charts/score_df_plot.html" width="700" height="500" frameborder="0" framespacing="0"
@@ -317,7 +321,8 @@
     <section id="code-analysis">
         <div class="subtitle">
             <h4>Analysis by industry</h4>
-            업종 분석 결과</div>
+            업종 분석 결과
+        </div>
     </section>
 
     <!-- 업종 선택 -->
@@ -357,12 +362,14 @@
     <section id="correlation-analysis">
         <div class="subtitle">
             <h4>Comparison & Correlation</h4>
-            상관 관계 비교</div>
+            상관 관계 비교
+        </div>
     </section>
 
 
     <!-- 상관 관계 비교 Correlation Analysis -->
     <section class="cor-analysis">
+        <h5>업종 별 웹 접근성 점수 분포</h5>
         <iframe src="./charts/survey_df_plot3.html" width="700" height="500" frameborder="0" framespacing="0"
             marginheight="0" marginwidth="0" scrolling="no"></iframe>
 
@@ -371,9 +378,8 @@
         </p>
     </section>
 
-
     <section class="cor-analysis byScore">
-        <h5>그래픽 스타일</h5>
+        <h5>업종 별 웹 접근성 점수 분포</h5>
         <ul>
             <li>vl</li>
             <li class="active">bo</li>
@@ -428,21 +434,22 @@
 
     <!-- 솔루션 제안 -->
     <section id="insight">
-        <h4>Insight</h4>
 
         <div class="subtitle">
+            <h4>Insight</h4>
+
             모두 장애인에게 큰 영향을 미치는 항목이지만,<br />해당 요소를 고려되지 않고 설계된 웹 사이트가 대부분
         </div>
 
         <div class="lowList">
             <h6>50점 이하의 점수를 받은 항목</h6>
             <ul>
-                <li>적절한 대체 텍스트</li>
-                <li>반복 영역 건너뛰기</li>
-                <li>레이블 제공</li>
-                <li>키보드 사용보장</li>
-                <li>텍스트 콘텐츠 명도 대비</li>
-                <li>제목 제공</li>
+                <li>❗️ 적절한 대체 텍스트</li>
+                <li>❗️ 반복 영역 건너뛰기</li>
+                <li>❗️ 레이블 제공</li>
+                <li>❗️ 키보드 사용보장</li>
+                <li>❗️ 텍스트 콘텐츠 명도 대비</li>
+                <li>❗️ 제목 제공</li>
             </ul>
         </div>
 
@@ -477,9 +484,8 @@
     </section>
 
     <section class="solution">
-        <h4>Solution - Government</h4>
-
         <div class="subtitle">
+            <h4>Solution - Government</h4>
             관련 정책 제시
         </div>
 
@@ -498,16 +504,17 @@
     </section>
 
     <section class="service">
-        <h4>Solution - Service</h4>
-
         <div class="subtitle">
+            <h4>Solution - Service</h4>
             <div>
-                <span>💡</span><br/>웹 접근성을 준수하는<br/>
+                <span>💡</span><br />웹 접근성을 준수하는<br />
                 홈페이지 제작 솔루션
             </div>
         </div>
-        <p>사이트의 업종 및 타겟을 설정하여 예상 사용자에게 적절한 웹 접근성 수준으로 사이트 제작을 돕는 서비스<br/>
-            기본적인 웹 접근성을 준수할 수 있는 솔루션을 개발 및 배포하여 민간 서비스 기업에 제공하면  웹 접근성 수준 향상을 기대할 수 있을 것</p>
+        <!-- <img src="./img/solution.png" alt=""> -->
+
+        <p>사이트의 업종 및 타겟을 설정하여 예상 사용자에게 적절한 웹 접근성 수준으로 사이트 제작을 돕는 서비스<br />
+            기본적인 웹 접근성을 준수할 수 있는 솔루션을 개발 및 배포하여 민간 서비스 기업에 제공하면 웹 접근성 수준 향상을 기대할 수 있을 것</p>
     </section>
 
 </body>
