@@ -62,7 +62,7 @@ body {
   /* color: #fff; */
   z-index: 100;
   overflow: hidden;
-  display: none;
+  /* display: none; */
 }
 
 header {

@@ -24,7 +24,8 @@ window.addEventListener('load', () => {
             height: window.innerHeight,
             showAngleIndicator: false,
             wireframes: false,
-            background: 'rgb(255,255,255)'
+            background: 'rgb(255,255,255)',
+            pixelRatio: window.devicePixelRatio
         }
     });
 
@@ -32,7 +33,7 @@ window.addEventListener('load', () => {
     Render.run(render);
 
     // add bodies
-    var offset = 10,
+    var offset = 0,
         options = {
             isStatic: true,
             render: {
@@ -45,10 +46,10 @@ window.addEventListener('load', () => {
 
     // these static walls will not be rendered in this sprites example, see options
     Composite.add(world, [
-        Bodies.rectangle(400, -offset, 800.5 + 2 * offset, 50.5, options),
-        Bodies.rectangle(400, 600 + offset * 2, 800.5 + 2 * offset, 10, options),
-        Bodies.rectangle(800 + offset, 300, 10.5, 600.5 + 2 * offset, options),
-        Bodies.rectangle(-offset, 300, 10.5, 600.5 + 2 * offset, options)
+        Bodies.rectangle(400, 0, window.innerWidth, 10, options),
+        Bodies.rectangle(500, 600, window.innerWidth, 10, options),
+        Bodies.rectangle(window.innerHeight, 300, 10, window.innerHeight, options),
+        Bodies.rectangle(0, 300, 10, window.innerHeight, options)
     ]);
 
     var size = 100;
@@ -94,7 +95,7 @@ window.addEventListener('load', () => {
     // fit the render viewport to the scene
     Render.lookAt(render, {
         min: { x: 0, y: 0 },
-        max: { x: 800, y: 600 }
+        max: { x: 1000, y: 600 }
     });
 
     mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.mouse.mousewheel);
