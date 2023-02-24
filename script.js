@@ -79,6 +79,7 @@ const code_array = [
 ];
 const viewStyles = document.querySelectorAll('.cor-analysis.byScore ul li')
 const iframes = document.querySelectorAll('.code-analysis iframe');
+const sections = document.querySelectorAll('section');
 
 window.addEventListener('load', () => {
 
@@ -119,5 +120,20 @@ window.addEventListener('load', () => {
             document.querySelector('.cor-analysis.byScore iframe').src = `./charts/code_plot_${idx + 1}.html`;
         })
     });
+
+    let observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            let elem = entry.target;
+            if (entry.isIntersecting) {
+                elem.classList.add('show');
+            } else {
+                elem.classList.remove('show');
+            }
+        });
+    });
+
+    sections.forEach((section) => {
+        observer.observe(section);
+    })
 
 });

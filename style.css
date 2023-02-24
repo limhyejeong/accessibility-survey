@@ -147,6 +147,15 @@ header ul li:nth-child(2) ul li:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+section {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
+}
+section.show {
+  opacity: 1;
+  transform: translateX(0);
+}
 section h4 {
   font-weight: 500;
   font-size: 1rem;
@@ -511,6 +520,10 @@ section h4 {
   font-size: 2rem;
 }
 
+iframe {
+  min-width: 50vw;
+}
+
 /* 업종 결과 code-analysis */
 .code-analysis {
   display: flex;
@@ -542,6 +555,7 @@ section h4 {
   border-right: 1px solid #eee;
   transition: 0.2s;
   opacity: 0.7;
+  min-width: 0;
 }
 .code-analysis iframe:hover {
   opacity: 1;
@@ -600,9 +614,6 @@ section h4 {
   border-right: none;
   color: #444;
 }
-iframe {
-  /* width: 50%; */
-}
 .byItems .graphInfo .label span:nth-child(1) {
   border-bottom: none;
   border-right: 1px solid #ccc;
@@ -617,7 +628,6 @@ iframe {
   display: flex;
   justify-content: center;
 }
-
 #correlation-analysis {
   border-top: 1px solid #eee;
 }
